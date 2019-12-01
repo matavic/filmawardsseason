@@ -1,1 +1,22 @@
-<div class="container">Awards Works</div>
+<div class="jumbotron jumbotron-fluid bg-warning text-white">
+    <div class="container">
+        <h1 class="display-4">Awards</h1>
+        <hr class="my-4">
+        <p class="lead">All the film awards of the 2019-2020 Season.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card-deck">
+    <div class="card text-center col-12 col-sm-6 col-md-3" style="width: 25rem;" *ngFor="let award of awards">
+        <img [src]="award.image" class="card-img-top" [alt]="award.title">
+            <div class="card-body">
+                <h5 class="card-title">{{ award.title}}</h5>
+                <p class="card-text">{{ award.description }}</p>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="btn btn-primary">View</a>
+            </div>
+        </div>
+    </div>
+</div>

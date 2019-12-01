@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'filmawardsseason';
   public isMenuCollapsed = true;
+  public fecha = new Date().getFullYear();
 }

@@ -1,0 +1,10 @@
+.jumbotron {
+    padding-top: 10px; 
+    padding-bottom: 5px; 
+}
+
+.sombra {
+    /* color: black;
+    text-shadow: 0 0 3px #FF0000; */
+    text-shadow: 0 0 3px #000000;
+  }

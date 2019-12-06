@@ -3,21 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
-import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbCollapseModule, NgbCarouselModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { AwardsComponent } from './awards/awards.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { AwardComponent } from './award/award.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AwardsComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    AwardComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbCollapseModule
+    NgbCollapseModule,
+    NgbCarouselModule,
+    NgbModalModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

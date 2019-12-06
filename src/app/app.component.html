@@ -1,12 +1,12 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg text-white bg-primary navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand text-white" href="#">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               width="25px" height="25px" viewBox="0 0 492.316 492.316" style="enable-background:new 0 0 492.316 492.316;"
               xml:space="preserve">
             <g>
-              <path d="M326.999,467.52h-9.459v-54.943h2.627c3.119,0,5.648-2.531,5.648-5.65s-2.529-5.65-5.648-5.65h-2.627v-21.157h-42.594
+              <path fill="white" d="M326.999,467.52h-9.459v-54.943h2.627c3.119,0,5.648-2.531,5.648-5.65s-2.529-5.65-5.648-5.65h-2.627v-21.157h-42.594
                 c-2.77-0.487-4.101-1.991-4.968-5.347c-2.715-10.508-2.169-20.952,1.62-31.047c4.871-12.984,6.209-27.293,4.088-43.737
                 c-0.138-1.069-0.279-2.14-0.423-3.21c-1.244-9.333-2.419-18.148-0.474-26.633c4.623-20.137,9.384-43.668,7.32-68.125
                 c-0.517-6.117-0.871-12.4-1.216-18.475c-0.104-1.866-0.211-3.733-0.319-5.601c-0.07-1.184,0.008-1.801,0.069-2.082
@@ -30,10 +30,10 @@
         <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav pl-md-4 ml-auto">
             <li class="nav-item">
-              <a class="nav-link" routerLink="/awards" (click)="isMenuCollapsed = true">Awards <span class="sr-only">(current)</span></a>
+              <a class="nav-link text-white" routerLink="/awards" (click)="isMenuCollapsed = true">Awards <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="/categories" (click)="isMenuCollapsed = true">Categories</a>
+              <a class="nav-link text-white" routerLink="/categories" (click)="isMenuCollapsed = true">Categories</a>
             </li>
           </ul>
         </div>
@@ -42,12 +42,12 @@
 </header>
 <router-outlet></router-outlet>
 
-<footer class="text-white bg-primary" role="contentinfo" style="position: fixed; left: 0; bottom: 0; width: 100%;">
+<footer class="text-white bg-primary mb-0 sticky-footer" role="contentinfo" >
   <div class="container">
     <div class="row">
       <div class="col-12 text-md-center text-left pt-2">
         <p>
-          Copyright &copy;{{ fecha }} All rights reserved | Made by Vicente Mata
+          Copyright &copy;{{ fecha }} All rights reserved | MataSoft Inc.
         </p>
       </div>
     </div>

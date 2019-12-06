@@ -1,0 +1,78 @@
+.jumbotron {
+    padding-top: 10px; 
+    padding-bottom: 5px; 
+}
+a:hover {
+    color: rgb(0, 0, 255);
+}
+
+#documentos {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #documentos td{
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .celda-titulo{background-color: #0091EA}
+  
+  #documentos tr:hover {background-color: #ddd;}
+  
+  #documentos th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0091EA;
+    color: white;
+  }
+  
+  .square-rounded-corner {
+    border: 1px solid #e9e9e9;
+    padding: 20px 10px 0px 10px;
+    border-radius: 8px;
+  }
+  
+  .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+
+.sombra {
+  /* color: black;
+  text-shadow: 0 0 3px #FF0000; */
+  text-shadow: 0 0 5px #000000;
+}
+  
+  table {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 701px) {
+    h1 {
+      font-size: 4vw;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 700px) {
+    h1 {
+      font-size: 5vw;
+    }
+  }
+
+  @media screen and (min-width: 701px) {
+    p {
+      font-size: 2vw;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 700px) {
+    p {
+      font-size: 3vw;
+    }
+  }

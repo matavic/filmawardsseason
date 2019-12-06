@@ -1,0 +1,136 @@
+<div class="jumbotron jumbotron-fluid bg-warning text-white">
+    <div class="container">
+        <h1 class="display-4 sombra">{{award}}</h1>
+        <hr class="my-2">
+        <p class="lead">{{awardDescription}}</p>
+    </div>
+</div>
+<div class="container-fluid mb-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-6">
+        <div class="col mb-4" *ngFor="let movie of movies$ | async">
+            <div class="card text-center border-secondary" >
+                    <img [src]="movie.winnerdata?.Poster || '../assets/img/nominee.png'" class="card-img-top" [alt]="movie.fwinner[0]">
+                <div class="card-header h-10 bg-secondary">
+                    <h5 class="card-title">{{movie.categorytit}}</h5>
+                  </div>
+                <ul class="list-group list-group-flush" >
+                    <li class="list-group-item" [class.bg-success]="movie.fwinner[0] === p" *ngFor="let p of movie.fnominees; let i = index">
+                        <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;">{{p}}</a><br>
+                        <span class="badge badge-warning">{{movie.pnominees[i]}}</span>
+                    </li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header bg-secondary">
+        <h4 class="modal-title" id="modal-basic-title">Movie Info</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <h2 class="text-center">{{movie.Title}}</h2>
+        <div class="text-center">
+            <img [src]="movie.Poster || '../assets/img/nominee.png'" style="width: 65%;" class="img-fluid" [alt]="movie.Title">
+        </div>
+        <br>
+        <table class="table table-hover" id="documentos">
+            <tr >
+                <td class="celda-titulo">
+                    Year: 
+                </td>
+                <td >
+                    {{ movie.Year }}
+                </td>
+            </tr>
+            <tr >
+                <td class="celda-titulo">
+                    Released: 
+                </td>
+                <td >
+                    {{ movie.Released }}
+                </td>
+            </tr>
+            <tr >
+                <td class="celda-titulo">
+                    Run Time: 
+                </td>
+                <td >
+                    {{ movie.Runtime }}
+                </td>
+            </tr>
+            <tr >
+                <td class="celda-titulo">
+                    Country: 
+                </td>
+                <td >
+                    {{ movie.Country }}
+                </td>
+            </tr>
+            <tr >
+                <td class="celda-titulo">
+                    Actors: 
+                </td>
+                <td >
+                    {{ movie.Actors }}
+                </td>
+            </tr>
+            <tr >
+                <td class="celda-titulo">
+                    Director: 
+                </td>
+                <td >
+                    {{ movie.Director }}
+                </td>
+            </tr>
+            <tr >
+                <td class="celda-titulo">
+                    Writer: 
+                </td>
+                <td >
+                    {{ movie.Writer }}
+                </td>
+            </tr>
+            <tr >
+                <td class="celda-titulo">
+                    Production: 
+                </td>
+                <td >
+                    {{ movie.Production }}
+                </td>
+            </tr>
+            <tr >
+                <td class="celda-titulo">
+                    Genre: 
+                </td>
+                <td >
+                    {{ movie.Genre }}
+                </td>
+            </tr>
+            <tr >
+                <td class="celda-titulo">
+                    Plot: 
+                </td>
+                <td >
+                    {{ movie.Plot }}
+                </td>
+            </tr>
+            <tr >
+                <td class="celda-titulo">
+                    Ratings: 
+                </td>
+                <td >
+                    <ng-container *ngFor="let rating of movie.Ratings; let i = index">
+                        <img [src]="critics[i]" style="width: 25px;">&nbsp;<span>{{rating.Source}} </span>&nbsp;<span class="badge badge-danger"> {{rating.Value}}</span><br>
+                    </ng-container>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
+    </div>
+</ng-template>

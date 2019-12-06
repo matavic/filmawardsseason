@@ -3,14 +3,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AwardsComponent } from './awards/awards.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { AwardComponent } from './award/award.component';
+import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
+  {
+    path: "award/:awardname", component: AwardComponent
+  },
   {
     path: "awards", component: AwardsComponent
   },
   {
     path: "categories", component: CategoriesComponent
+  },
+  {
+    path: "", component: MainComponent
   }
 ];
 

@@ -18,7 +18,7 @@ export class AwardComponent implements OnInit {
   public movies$: Observable<any>;
   public movieInfo: any;
   public noImage = '';
-  public movie: {};
+  public movie: any = {};
   critics = [
     '../assets/img/critics1.jpg',
     '../assets/img/critics2.jpg',

@@ -46,8 +46,10 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-md-center text-left pt-2">
+          <ng-template #popContent><b>matavic25@gmail.com</b></ng-template>
+          <ng-template #popTitle><span class="text-dark">Contact me!</span></ng-template>
         <p>
-          Copyright &copy;{{ fecha }} All rights reserved | MataSoft Inc.
+          Copyright &copy;{{ fecha }} All rights reserved | <span triggers="mouseenter:mouseleave" [ngbPopover]="popContent" [popoverTitle]="popTitle">MataSoft Inc.</span>
         </p>
       </div>
     </div>

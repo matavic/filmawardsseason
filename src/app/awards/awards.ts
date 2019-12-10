@@ -54,22 +54,52 @@ export const awards = [
         date: 'December 8, 2019'
     },
     {
+        title: 'Chicago Film Critics Awards',
+        image: '../assets/img/chicago.jpg',
+        description: 'The CFCA is an association of professional film critics, who work in print, broadcast and online media, based in Chicago, Illinois, United States.',
+        date: 'December 14, 2019'
+    },
+    {
         title: 'Golden Globe Awards',
         image: '../assets/img/golden-globes.jpg',
         description: 'Accolades bestowed by the 93 members of the Hollywood Foreign Press Association beginning in January 1944,recognizing excellence in film, both domestic and foreign.',
         date: 'January 5, 2020'
     },
     {
-        title: ' Critics\' Choice Awards',
+        title: 'Critics\' Choice Awards',
         image: '../assets/img/critics.jpg',
         description: 'Awards show presented annually by the American-Canadian Broadcast Film Critics Association (BFCA) to honor the finest in cinematic achievement.',
         date: 'January 12, 2020'
+    },
+    {
+        title: 'Screen Actors Guild Awards',
+        image: '../assets/img/actors-guild.jpg',
+        description: 'SAG Awards are accolades given by the Screen Actors Guild‐American Federation Artists (SAG) to recognize outstanding performances in film.',
+        date: 'January 19, 2020'
+    },
+    {
+        title: 'Directors Guild of America Awards',
+        image: '../assets/img/directors-guild.jpg',
+        description: 'The Directors Guild of America Awards are issued annually by the Directors Guild of America.',
+        date: 'January 25, 2020'
     },
     {
         title: 'Annie Awards',
         image: '../assets/img/annie.jpg',
         description: 'The Annie Awards are accolades presented annually by the Los Angeles branch of the International Animated Film Association, since 1972, to recognize excellence in animation in film.',
         date: 'January 25, 2020'
+    },
+    {
+        title: 'Writers Guild of America Awards',
+        image: '../assets/img/writers-guild.jpg',
+        description: 'The Writers Guild of America Awards for outstanding achievements in film writing, including both fiction and non-fiction categories.',
+        date: 'Feabruary 1, 2020'
+    },
+    {
+        title: 'BAFTAs',
+        image: '../assets/img/bafta.png',
+        description: 'The BAFTA Film Awards are presented in an annual award show hosted by the British Academy of Film and Television Arts to honour the best British and international contributions to film.',
+        date: 'February 2, 2020'
     },
     {
         title: 'Satellite Awards',
@@ -82,5 +112,11 @@ export const awards = [
         image: '../assets/img/spirit.jpg',
         description: 'The Film Independent Spirit Awards, founded in 1984, are awards dedicated to independent filmmakers.',
         date: 'February 8, 2020'
+    },
+    {
+        title: 'Academy Awards',
+        image: '../assets/img/oscars.jpg',
+        description: 'The Academy Awards, more popularly known as the Oscars, are awards for artistic and technical merit in the film industry. Given annually by the Academy of Motion Picture Arts and Sciences (AMPAS).',
+        date: 'February 9, 2020'
     }
 ];

@@ -87,3 +87,42 @@ a:hover {
       font-size: 1vw;
     }
   }
+
+  @media screen and (min-width: 575.98px) { 
+    .card-columns {
+      column-count: 2;
+    }
+    }
+
+  /* Small devices (landscape phones, less than 768px) */
+  @media screen and (min-width: 767.98px) {
+    .card-columns {
+      column-count: 3;
+    }
+    }
+
+  /* Medium devices (tablets, less than 992px) */
+  @media screen and (min-width: 991.98px) { 
+    .card-columns {
+      column-count: 4;
+    }
+  }
+
+  /* Large devices (desktops, less than 1200px) */
+  @media screen and (min-width: 1199.98px) { 
+    .card-columns {
+      column-count: 5;
+    }
+  }
+
+  @media screen and (min-width: 1399.98px) { 
+    .card-columns {
+      column-count: 6;
+    }
+  }
+
+  @media screen and (min-width: 1599.98px) { 
+    .card-columns {
+      column-count: 7;
+    }
+  }

@@ -1,8 +1,8 @@
 <div class="jumbotron jumbotron-fluid bg-warning text-white">
     <div class="container">
-        <h1 class="display-4 sombra">{{award}}</h1>
+        <h1 class="display-4 sombra">Best {{category}}</h1>
         <hr class="my-2">
-        <p class="lead">{{awardDescription}} Date: {{awardDate}}</p>
+        <p class="lead">{{categoryDescription}}</p>
     </div>
 </div>
 <div class="container-fluid mb-5">
@@ -11,8 +11,9 @@
             <div class="card text-center border-secondary" >
                     <img [src]="movie.winnerdata?.Poster || '../assets/img/nominee.png'" class="card-img-top" [alt]="movie.fwinner[0]">
                 <div class="card-header h-10 bg-secondary">
-                    <h5 class="card-title">{{movie.categorytit}}</h5>
-                  </div>
+                    <h5 class="card-title">{{movie.award}}</h5>
+                    <span class="badge badge-primary">{{movie.categorytit}}</span>
+                    </div>
                 <ul class="list-group list-group-flush" >
                     <li class="list-group-item" [class.bg-success]="movie.fwinner[0] === p" *ngFor="let p of movie.fnominees; let i = index">
                         <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;">{{p}}</a><br>

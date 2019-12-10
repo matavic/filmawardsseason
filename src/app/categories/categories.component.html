@@ -1,1 +1,35 @@
-<div class="container">Categories Works</div>
+<div class="jumbotron jumbotron-fluid bg-warning text-white">
+    <div class="container">
+        <table>
+            <tr>
+                <td><img src="../assets/img/envelope.png" style="height: 100px;" ></td>
+                
+                <td><h1 class="display-4 sombra">Categories</h1>
+                    <hr class="my-2">
+                    <p class="lead">The most common award categories of this season.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="container-fluid mb-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5">
+        <div class="col mb-4" *ngFor="let category of categories">
+            <div class="card text-center h-80 border-secondary" >
+                <div class="text-center mt-1">
+                    <img [src]="category.image" class="card-img-top" [alt]="category.title" style="width:100px;">
+                </div>    
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">{{ category.title}}</h5>
+                        <p class="card-text">{{ category.description }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a [routerLink]="['/category', category.title]" class="btn btn-primary">View</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</div>
+

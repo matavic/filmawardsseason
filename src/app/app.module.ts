@@ -10,6 +10,7 @@ import { AwardsComponent } from './awards/awards.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AwardComponent } from './award/award.component';
 import { MainComponent } from './main/main.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MainComponent } from './main/main.component';
     AwardsComponent,
     CategoriesComponent,
     AwardComponent,
-    MainComponent
+    MainComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

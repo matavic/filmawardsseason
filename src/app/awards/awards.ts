@@ -8,8 +8,14 @@ export const awards = [
     {
         title: 'People\'s Choice Awards',
         image: '../assets/img/people-s-choice-awards-se.jpeg',
-        description: 'It\'s an American awards show, recognizing people in entertainment, voted online by the general public and fans. The show has been held annually since 1975',
+        description: 'It\'s an American awards show, recognizing people in entertainment, voted online by the general public and fans. The show has been held annually since 1975.',
         date: 'November 10, 2019'
+    },
+    {
+        title: 'British Independent Film Awards',
+        image: '../assets/img/bifa.jpg',
+        description: 'Nominations for the annual awards ceremony are announced in early November, with the ceremony itself taking place in early December.',
+        date: 'December 1, 2019'
     },
     {
         title: 'Gotham Awards',
@@ -21,18 +27,48 @@ export const awards = [
         title: 'National Board of Review',
         image: '../assets/img/nbr.png',
         description: 'The National Board of Review of Motion Pictures is an organization in the United States dedicated to discussing and selecting what its members regard as the best film works of each year.',
-        date: 'January 8, 2020'
+        date: 'December 3, 2019'
     },
     {
         title: 'New York Film Critics Circle',
         image: '../assets/img/NYFCC_logo.jpg',
         description: 'It\'s an American film critic organization founded in 1935. Its membership includes over 30 film critics from New York-based daily and weekly newspapers, magazines.',
-        date: 'December 8, 2019'
+        date: 'December 4, 2019'
+    },
+    {
+        title: 'AFI Awards',
+        image: '../assets/img/afi.jpg',
+        description: 'Each year the AFI Awards honor the ten outstanding films ("Movies of the Year"). The awards are a non-competitive acknowledgement of excellence.',
+        date: 'December 4, 2019'
+    },
+    {
+        title: 'European Film Awards',
+        image: '../assets/img/efa.png',
+        description: 'The European Film Awards have been presented annually since 1988 by the European Film Academy to recognize excellence in European cinematic achievements.',
+        date: 'December 7, 2019'
     },
     {
         title: 'Los Angeles Film Critics Association',
         image: '../assets/img/Los-Angeles-Film-Critics-Association-Logo.jpg',
         description: 'It\'s an American film critic organization founded in 1975. Its membership comprises film critics from Los Angeles-based print and electronic media.',
-        date: 'January 11, 2020'
+        date: 'December 8, 2019'
+    },
+    {
+        title: 'Annie Awards',
+        image: '../assets/img/annie.jpg',
+        description: 'The Annie Awards are accolades presented annually by the Los Angeles branch of the International Animated Film Association, since 1972, to recognize excellence in animation in film',
+        date: 'January 25, 2020'
+    },
+    {
+        title: 'Satellite Awards',
+        image: '../assets/img/satellite.jpg',
+        description: 'The Satellite Awards are annual awards given by the International Press Academy that are commonly noted in entertainment industry journals and blogs.',
+        date: 'February 7, 2020'
+    },
+    {
+        title: 'Independent Spirit Awards',
+        image: '../assets/img/spirit.jpg',
+        description: 'The Film Independent Spirit Awards, founded in 1984, are awards dedicated to independent filmmakers.',
+        date: 'February 8, 2020'
     }
 ];

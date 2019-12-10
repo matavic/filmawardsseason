@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { categories } from './categories';
 
 @Component({
   selector: 'app-categories',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
+  categories: any;
   constructor() { }
 
   ngOnInit() {
+    this.categories = categories;
   }
 
 }

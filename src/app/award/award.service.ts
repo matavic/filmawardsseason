@@ -15,6 +15,10 @@ export class AwardService {
      return this.http.get(`${environment.apiUrl}awards?a=${award}`);
    }
 
+   getMoviesByCategory(category){
+     return this.http.get(`${environment.apiUrl}categories?c=${category}`);
+   }
+
    getMovie(movie) {
     const options = { params: new HttpParams().set('m', movie) };
     return this.http.get(`${environment.apiUrl}movie`, options);

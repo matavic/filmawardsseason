@@ -15,6 +15,7 @@ export class AwardComponent implements OnInit {
   public award: any;
   public awardDescription: string;
   public awardImage: string;
+  public awardDate: string;
   public movies$: Observable<any>;
   public movieInfo: any;
   public noImage = '';
@@ -35,6 +36,7 @@ export class AwardComponent implements OnInit {
     this.movies$ = this.awardService.getMovies(this.award);
     this.awardDescription = awards.find((a) => a.title === this.award).description;
     this.awardImage = awards.find((a) => a.title === this.award).image;
+    this.awardDate = awards.find((a) => a.title === this.award).date;
   }
 
   open(content, movie) {
@@ -44,5 +46,4 @@ export class AwardComponent implements OnInit {
       });
     })
   }
-
 }

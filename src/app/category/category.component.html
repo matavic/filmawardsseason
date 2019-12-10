@@ -16,7 +16,7 @@
                     </div>
                 <ul class="list-group list-group-flush" >
                     <li class="list-group-item" [class.bg-success]="movie.fwinner[0] === p" *ngFor="let p of movie.fnominees; let i = index">
-                        <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;">{{p}}</a><br>
+                        <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;" placement="top" ngbTooltip="View Movie Info">{{p}}</a><br>
                         <span class="badge badge-warning">{{movie.pnominees[i]}}</span>
                     </li>
                 </ul>    

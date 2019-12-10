@@ -5,7 +5,7 @@
         <p class="lead">{{awardDescription}} Date: {{awardDate}}</p>
     </div>
 </div>
-<div class="container-fluid mb-5">
+<div class="container-fluid mb-5" ngxUiLoaderBlurred>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-6">
         <div class="col mb-4" *ngFor="let movie of movies$ | async">
             <div class="card text-center border-secondary" >
@@ -15,7 +15,7 @@
                   </div>
                 <ul class="list-group list-group-flush" >
                     <li class="list-group-item" [class.bg-success]="movie.fwinner[0] === p" *ngFor="let p of movie.fnominees; let i = index">
-                        <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;">{{p}}</a><br>
+                        <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;" placement="top" ngbTooltip="View Movie Info">{{p}}</a><br>
                         <span class="badge badge-warning">{{movie.pnominees[i]}}</span>
                     </li>
                 </ul>    
@@ -23,7 +23,7 @@
         </div>
     </div>
 </div>
-
+<ngx-ui-loader fgsColor="SlateGray"></ngx-ui-loader>
 <ng-template #content let-modal>
     <div class="modal-header bg-secondary">
         <h4 class="modal-title" id="modal-basic-title">Movie Info</h4>
@@ -130,6 +130,7 @@
             </tr>
         </table>
     </div>
+    <ngx-ui-loader fgsColor="SlateGray" loaderId="loader-movie"></ngx-ui-loader>
     <div class="modal-footer">
         <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
     </div>

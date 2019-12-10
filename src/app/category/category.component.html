@@ -5,7 +5,7 @@
         <p class="lead">{{categoryDescription}}</p>
     </div>
 </div>
-<div class="container-fluid mb-5">
+<div class="container-fluid mb-5" ngxUiLoaderBlurred>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-6">
         <div class="col mb-4" *ngFor="let movie of movies$ | async">
             <div class="card text-center border-secondary" >
@@ -24,7 +24,7 @@
         </div>
     </div>
 </div>
-
+<ngx-ui-loader fgsColor="SlateGray"></ngx-ui-loader>
 <ng-template #content let-modal>
     <div class="modal-header bg-secondary">
         <h4 class="modal-title" id="modal-basic-title">Movie Info</h4>
@@ -131,6 +131,7 @@
             </tr>
         </table>
     </div>
+    <ngx-ui-loader fgsColor="SlateGray" loaderId="loader-movie"></ngx-ui-loader>
     <div class="modal-footer">
         <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
     </div>

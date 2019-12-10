@@ -20,7 +20,7 @@ export const categories = [
         description: 'It is given in honor of an actress who has delivered an outstanding performance in a leading role while working within the film industry.',
     },
     {
-        title: 'Supoorting Actress',
+        title: 'Supporting Actress',
         image: '../assets/img/celebrity.png',
         description: 'It is given in honor of an actress who has delivered an outstanding performance in a supporting role while working within the film industry.',
     },

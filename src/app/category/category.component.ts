@@ -5,6 +5,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { categories } from '../categories/categories';
 import { Observable } from 'rxjs';
 import { mapCategories } from './map-categories';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-category',
@@ -27,20 +28,25 @@ export class CategoryComponent implements OnInit {
   constructor(
     private route: ActivatedRoute, 
     private awardService: AwardService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private ngxLoader: NgxUiLoaderService
   ) { }
 
   ngOnInit() {
+    this.ngxLoader.start();
     this.category = this.route.snapshot.paramMap.get('categoryname');
-    this.movies$ = this.awardService.getMoviesByCategory(mapCategories.get(this.category));
     this.categoryDescription = categories.find((a) => a.title === this.category).description;
+    this.movies$ = this.awardService.getMoviesByCategory(mapCategories.get(this.category));
+    this.ngxLoader.stop();
   }
 
   open(content, movie) {
+    this.ngxLoader.startLoader("loader-movie");
     this.awardService.getMovie(movie).subscribe( (data: any) => {
       this.movie = data;
       this.modalService.open(content, { centered: true }).result.then((result) => {
       });
+      this.ngxLoader.stopLoader("loader-movie");
     })
   }
 

@@ -54,9 +54,21 @@ export const awards = [
         date: 'December 8, 2019'
     },
     {
+        title: 'Golden Globe Awards',
+        image: '../assets/img/golden-globes.jpg',
+        description: 'Accolades bestowed by the 93 members of the Hollywood Foreign Press Association beginning in January 1944,recognizing excellence in film, both domestic and foreign.',
+        date: 'January 5, 2020'
+    },
+    {
+        title: ' Critics\' Choice Awards',
+        image: '../assets/img/critics.jpg',
+        description: 'Awards show presented annually by the American-Canadian Broadcast Film Critics Association (BFCA) to honor the finest in cinematic achievement.',
+        date: 'January 12, 2020'
+    },
+    {
         title: 'Annie Awards',
         image: '../assets/img/annie.jpg',
-        description: 'The Annie Awards are accolades presented annually by the Los Angeles branch of the International Animated Film Association, since 1972, to recognize excellence in animation in film',
+        description: 'The Annie Awards are accolades presented annually by the Los Angeles branch of the International Animated Film Association, since 1972, to recognize excellence in animation in film.',
         date: 'January 25, 2020'
     },
     {

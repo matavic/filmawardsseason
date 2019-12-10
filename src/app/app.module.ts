@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-import { NgbCollapseModule, NgbCarouselModule, NgbModalModule, NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCollapseModule, NgbCarouselModule, NgbModalModule, NgbPopoverModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxUiLoaderModule } from  'ngx-ui-loader';
 import { AwardsComponent } from './awards/awards.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { AwardComponent } from './award/award.component';
@@ -28,7 +29,9 @@ import { CategoryComponent } from './category/category.component';
     NgbCarouselModule,
     NgbPopoverModule,
     NgbModalModule,
-    HttpClientModule
+    NgbTooltipModule,
+    HttpClientModule,
+    NgxUiLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

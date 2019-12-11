@@ -37,7 +37,7 @@ export const categories = [
     {
         title: 'Documentary',
         image: '../assets/img/documentary.png',
-        description: 'It is an award for for feature-length documentaries.',
+        description: 'It is an award for feature-length documentaries.',
     },
     {
         title: 'Animated Picture',

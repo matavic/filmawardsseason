@@ -6,6 +6,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { AwardComponent } from './award/award.component';
 import { MainComponent } from './main/main.component';
 import { CategoryComponent } from './category/category.component';
+import { ResultsComponent } from './results/results.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,9 @@ const routes: Routes = [
   },
   {
     path: "category/:categoryname", component: CategoryComponent
+  },
+  {
+    path: "results/:search", component: ResultsComponent
   },
   {
     path: "awards", component: AwardsComponent

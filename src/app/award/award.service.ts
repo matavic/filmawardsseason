@@ -24,4 +24,8 @@ export class AwardService {
     return this.http.get(`${environment.apiUrl}movie`, options);
    }
 
+   search(term) {
+    const options = { params: new HttpParams().set('t', term) };
+    return this.http.get(`${environment.apiUrl}search`, options);
+   }
 }

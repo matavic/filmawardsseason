@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { NgbCollapseModule, NgbCarouselModule, NgbModalModule, NgbPopoverModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxUiLoaderModule } from  'ngx-ui-loader';
@@ -12,6 +13,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { AwardComponent } from './award/award.component';
 import { MainComponent } from './main/main.component';
 import { CategoryComponent } from './category/category.component';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { CategoryComponent } from './category/category.component';
     CategoriesComponent,
     AwardComponent,
     MainComponent,
-    CategoryComponent
+    CategoryComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgbCollapseModule,
     NgbCarouselModule,
     NgbPopoverModule,

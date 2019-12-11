@@ -5,6 +5,13 @@ position: fixed;
   width: 100%;
 }
 
-.popover {
-  background: tomato;
+::-webkit-input-placeholder {
+  font-size: 13px!important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+     font-size: 13px!important;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+     font-size: 13px!important;
 }

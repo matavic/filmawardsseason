@@ -129,7 +129,7 @@ a:hover {
 
   .text_badge{
     display:inline-block;
-    width:70%;
+    width:auto;
     max-width:91%;
     text-overflow:ellipsis;
     white-space:nowrap;

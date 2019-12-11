@@ -14,8 +14,10 @@
             </div>
             <ul class="list-group list-group-flush" >
                 <li class="list-group-item" [class.bg-success]="movie.fwinner[0] === p" *ngFor="let p of movie.fnominees; let i = index">
-                    <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;" placement="top" ngbTooltip="View Movie Info">{{p}}</a><br>
-                    <span class="badge badge-warning text_badge">{{movie.pnominees[i]}}</span>
+                        <span *ngIf="movie.categorycod === 'foreign'"><span class="flag-icon" [ngClass]="movie.categorycod === 'foreign' ? flags.get(movie.pnominees[i]) : ''"></span>&nbsp;&nbsp;</span>
+                        <br *ngIf="movie.categorycod === 'foreign'">
+                        <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;" placement="top" ngbTooltip="View Movie Info">{{p}}</a><br>
+                    <span *ngIf="movie.pnominees[i]" class="badge badge-warning text_badge">{{movie.pnominees[i]}}</span>
                 </li>
             </ul>
         </div>
@@ -50,6 +52,7 @@
     </div>
     <div class="modal-body">
         <h2 class="text-center">{{movie.Title}}</h2>
+        <h3 *ngIf="!movie.Title" class="text-center">Movie Info No Available</h3>
         <div class="text-center">
             <img [src]="movie.Poster || '../assets/img/nominee.png'" style="width: 65%;" class="img-fluid" [alt]="movie.Title">
         </div>

@@ -6,6 +6,7 @@ import { categories } from '../categories/categories';
 import { Observable } from 'rxjs';
 import { mapCategories } from './map-categories';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
+import { mapFlags } from '../map-flags';
 
 @Component({
   selector: 'app-category',
@@ -19,6 +20,7 @@ export class CategoryComponent implements OnInit {
   public movies$: Observable<any>;
   public movieInfo: any;
   public movie: any = {};
+  public flags = mapFlags;
   critics = [
     '../assets/img/critics1.jpg',
     '../assets/img/critics2.jpg',

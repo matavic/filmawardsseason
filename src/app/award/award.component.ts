@@ -5,6 +5,7 @@ import { AwardService } from './award.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { awards } from '../awards/awards';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
+import { mapFlags } from '../map-flags';
 
 @Component({
   selector: 'app-award',
@@ -21,6 +22,7 @@ export class AwardComponent implements OnInit {
   public movieInfo: any;
   public noImage = '';
   public movie: any = {};
+  public flags = mapFlags;
   critics = [
     '../assets/img/critics1.jpg',
     '../assets/img/critics2.jpg',

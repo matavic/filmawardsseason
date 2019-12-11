@@ -8,18 +8,21 @@
 <div class="container-fluid mb-5" ngxUiLoaderBlurred>
     <div class="card-columns">
         <div class="card text-center border-secondary" *ngFor="let movie of movies$ | async">
-                <img [src]="movie.winnerdata?.Poster || '../assets/img/nominee.png'" class="card-img-top" [alt]="movie.fwinner[0]">
+            <img [src]="movie.winnerdata?.Poster || '../assets/img/nominee.png'" class="card-img-top" [alt]="movie.fwinner[0]">
             <div class="card-header h-10 bg-secondary">
                 <h5 class="card-title">{{movie.categorytit}}</h5>
-                </div>
+            </div>
             <ul class="list-group list-group-flush" >
                 <li class="list-group-item" [class.bg-success]="movie.fwinner[0] === p" *ngFor="let p of movie.fnominees; let i = index">
                     <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;" placement="top" ngbTooltip="View Movie Info">{{p}}</a><br>
-                    <span class="badge badge-warning">{{movie.pnominees[i]}}</span>
+                    <span class="badge badge-warning text_badge">{{movie.pnominees[i]}}</span>
                 </li>
-            </ul>    
+            </ul>
         </div>
-</div>  
+    </div> 
+    <div class="py-2" *ngIf="(movies$ | async)?.length == 0">
+        <h1 class="text-center">TO BE ANNOUNCED ...</h1>
+    </div> 
     <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-6">
         <div class="col mb-4" *ngFor="let movie of movies$ | async">
             <div class="card text-center border-secondary" >

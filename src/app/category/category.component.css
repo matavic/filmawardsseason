@@ -115,3 +115,12 @@ a:hover {
       column-count: 7;
     }
   }
+
+  .text_badge{
+    display:inline-block;
+    width:70%;
+    max-width:91%;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+  }

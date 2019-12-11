@@ -16,11 +16,11 @@
             <ul class="list-group list-group-flush" >
                 <li class="list-group-item" [class.bg-success]="movie.fwinner[0] === p" *ngFor="let p of movie.fnominees; let i = index">
                     <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;" placement="top" ngbTooltip="View Movie Info">{{p}}</a><br>
-                    <span class="badge badge-warning">{{movie.pnominees[i]}}</span>
+                    <span class="badge badge-warning text_badge">{{movie.pnominees[i]}}</span>
                 </li>
             </ul>    
         </div>  
-    </div>  
+    </div>   
 <!-- <div class="container-fluid mb-5" ngxUiLoaderBlurred>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-6">
         <div class="col mb-4" *ngFor="let movie of movies$ | async">

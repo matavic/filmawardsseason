@@ -19,7 +19,7 @@
                     <br *ngIf="movie.categorycod === 'foreign'">
                     <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;" placement="top" ngbTooltip="View Movie Info">{{p}}</a><br>
                     <span *ngIf="movie.pnominees[i]" class="badge badge-warning text_badge">{{movie.pnominees[i]}}</span><br *ngIf="movie.winnerdata?.Youtube">
-                    <a *ngIf="movie.winnerdata?.Youtube" (click)="openTrailerModal(movie.winnerdata?.Youtube)" style="cursor: pointer;"><img src="../assets/img/youtube.jpg" width="24" [alt]="Trailer" title="View Trailer"></a>
+                    <a *ngIf="movie.winnerdata?.Youtube" (click)="openTrailerModal(movie.winnerdata?.Youtube)" style="cursor: pointer;"><img src="../assets/img/youtube.jpg" width="24" alt="Trailer" title="View Trailer"></a>
                 </li>
             </ul>    
         </div>  

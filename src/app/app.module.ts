@@ -14,6 +14,7 @@ import { AwardComponent } from './award/award.component';
 import { MainComponent } from './main/main.component';
 import { CategoryComponent } from './category/category.component';
 import { ResultsComponent } from './results/results.component';
+import { TrailerModalComponent } from './trailer-modal/trailer-modal.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ResultsComponent } from './results/results.component';
     AwardComponent,
     MainComponent,
     CategoryComponent,
-    ResultsComponent
+    ResultsComponent,
+    TrailerModalComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { ResultsComponent } from './results/results.component';
     NgxUiLoaderModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [TrailerModalComponent]
 })
 export class AppModule { }

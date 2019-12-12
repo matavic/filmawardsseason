@@ -124,3 +124,16 @@ a:hover {
     white-space:nowrap;
     overflow:hidden;
   }
+
+  .custom-backdrop {
+    background-color: #3b454e;
+  }
+
+  .dark-modal {
+    background-color: #000000;
+  }
+
+  .dark-modal .modal-content {
+    background-color: #292b2c;
+    color: white;
+  }

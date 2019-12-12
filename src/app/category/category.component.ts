@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { mapCategories } from './map-categories';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { mapFlags } from '../map-flags';
+import { TrailerModalComponent } from '../trailer-modal/trailer-modal.component';
 
 @Component({
   selector: 'app-category',
@@ -50,6 +51,14 @@ export class CategoryComponent implements OnInit {
       });
       this.ngxLoader.stopLoader("loader-movie");
     })
+  }
+
+  openTrailerModal(videoId) {
+    this.ngxLoader.startLoader("loader-movie");
+    const modalRef = this.modalService.open(TrailerModalComponent, {backdropClass: 'custom-backdrop', centered: true, size: 'xl', windowClass: 'dark-modal'});
+    let url = `https://www.youtube.com/embed/${videoId}?controls=0&autoplay=1`
+    modalRef.componentInstance.videoId = url;
+    this.ngxLoader.stopLoader("loader-movie");
   }
 
 }

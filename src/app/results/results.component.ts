@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { AwardService } from '../award/award.service';
 import { NgbModal}  from '@ng-bootstrap/ng-bootstrap';
 import { mapFlags } from '../map-flags';
+import { TrailerModalComponent } from '../trailer-modal/trailer-modal.component';
 
 @Component({
   selector: 'app-results',
@@ -55,4 +56,11 @@ export class ResultsComponent implements OnInit {
     })
   }
 
+  openTrailerModal(videoId) {
+    this.ngxLoader.startLoader("loader-movie");
+    const modalRef = this.modalService.open(TrailerModalComponent, {backdropClass: 'custom-backdrop', centered: true, size: 'xl', windowClass: 'dark-modal'});
+    let url = `https://www.youtube.com/embed/${videoId}?controls=0&autoplay=1`
+    modalRef.componentInstance.videoId = url;
+    this.ngxLoader.stopLoader("loader-movie");
+  }
 }

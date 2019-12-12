@@ -6,6 +6,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import { awards } from '../awards/awards';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { mapFlags } from '../map-flags';
+import { TrailerModalComponent } from '../trailer-modal/trailer-modal.component';
 
 @Component({
   selector: 'app-award',
@@ -50,10 +51,17 @@ export class AwardComponent implements OnInit {
     this.ngxLoader.startLoader("loader-movie");
     this.awardService.getMovie(movie).subscribe( (data: any) => {
       this.movie = data;
-      this.ngxLoader.stop();
       this.modalService.open(content, { centered: true }).result.then((result) => {
       });
       this.ngxLoader.stopLoader("loader-movie");
     })
+  }
+
+  openTrailerModal(videoId) {
+    this.ngxLoader.startLoader("loader-movie");
+    const modalRef = this.modalService.open(TrailerModalComponent, {backdropClass: 'custom-backdrop', centered: true, size: 'xl', windowClass: 'dark-modal'});
+    let url = `https://www.youtube.com/embed/${videoId}?controls=0&autoplay=1`
+    modalRef.componentInstance.videoId = url;
+    this.ngxLoader.stopLoader("loader-movie");
   }
 }

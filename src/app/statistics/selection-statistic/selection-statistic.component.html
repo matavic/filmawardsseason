@@ -1,0 +1,42 @@
+<div class="trans-back" style="padding-bottom: 4rem; padding-top: 3rem;">
+<section >
+    <div class="container marketing">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Statistics By Awards</h5>
+                      <!-- <form> -->
+                        <div class="form-group my-3">
+                            <select class="custom-select" (change)="changeSuit($event)">
+                                <option selected disabled value="">Select Film Awards...</option>
+                                <option *ngFor="let award of awards" [value]="award.title">{{award.title}}</option>
+                            </select>
+                        </div>
+                    <!-- </form> -->
+                      <button class="btn btn-warning" (click)="goToStatistics('one')" [disabled]="!buttonDisabled">Go &raquo;</button>
+                    </div>
+                  </div>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <div class="card h-80">
+                    <div class="card-body">
+                      <h5 class="card-title">Global Statistics - Awards</h5>
+                      <p class="card-text">Most Awarded Movies counting all Film Awards.</p>
+                      <a [routerLink]="['/statistics', 'awards']" class="btn btn-warning">Go &raquo;</a>
+                    </div>
+                  </div>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <div class="card h-80">
+                    <div class="card-body">
+                      <h5 class="card-title">Global Statistics - Nominations</h5>
+                      <p class="card-text">Most Nominated Movies counting all Film Awards.</p>
+                      <a [routerLink]="['/statistics', 'nominations']" class="btn btn-warning">Go &raquo;</a>
+                    </div>
+                  </div>
+            </div><!-- /.col-lg-4 -->
+            </div>
+        </div> 
+    </section>
+</div>

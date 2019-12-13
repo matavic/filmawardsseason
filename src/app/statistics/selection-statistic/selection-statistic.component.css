@@ -1,0 +1,27 @@
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    /* color: #D3A500; */
+  }
+  .marketing h2 {
+    font-weight: 400;
+  }
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+
+  .trans-back {
+    background: url('../../../assets/img/oscars_back_transparent.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 88vh;
+  }
+
+  @media (min-width: 992px) {
+
+    section {
+      padding-top: 250px;
+    }
+
+  }

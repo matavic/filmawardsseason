@@ -1,32 +1,33 @@
 <ngb-carousel *ngIf="images">
     <ng-template ngbSlide>
         <div >
-        <img [src]="images[0]" class="d-block img-fluid">
+        <img [src]="images[0]" class="d-block img-fluid" (loaded)="imgLoaded1()" [hidden]="hidImage1">
         </div>
-        <div class="carousel-caption">
+        <div class="carousel-caption" [hidden]="hidImage1">
         <h1 class="sombra1">Film Awards Season</h1>
         <p class="font-weight-bold sombra1">Film awards season is an annual time period between November and February every year, in the United States, where a majority of important film award events take place.</p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <div >
-        <img [src]="images[1]" class="d-block img-fluid">
+        <img [src]="images[1]" class="d-block img-fluid" (loaded)="imgLoaded2()" [hidden]="hidImage2">
         </div>
-        <div class="carousel-caption">
+        <div class="carousel-caption" [hidden]="hidImage2">
             <h1 class="sombra2">Film Awards Season</h1>
             <p class="font-weight-bold sombra2">In October ballots are sent out to voters, to collect nominations for the first award ceremonies, which are usually the Hollywood Awards or the independent Gotham Awards, to begin awards season in November.</p>
         </div>
     </ng-template>
     <ng-template ngbSlide>
         <div >
-        <img [src]="images[2]" class="d-block img-fluid">
+        <img [src]="images[2]" class="d-block img-fluid" (loaded)="imgLoaded3()" [hidden]="hidImage3">
         </div>
-        <div class="carousel-caption">
+        <div class="carousel-caption" [hidden]="hidImage3">
         <h1 class="sombra3">Film Awards Season</h1>
         <p class="font-weight-bold sombra3">The season usually culminates in the Academy Awards in late February or early March </p>
         </div>
     </ng-template>
 </ngb-carousel>
+<ngx-ui-loader fgsColor="SlateGray" fgsType="rectangle-bounce-pulse-out-rapid"></ngx-ui-loader>
 <section class="mt-5">
     <div class="row featurette m-2">
         <div class="col-md-6 order-md-2 col-lg-4  text-center">

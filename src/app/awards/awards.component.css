@@ -1,10 +1,17 @@
 .jumbotron {
     padding-top: 10px; 
     padding-bottom: 5px; 
+    margin-bottom: 0px; 
 }
 
 .sombra {
     /* color: black;
     text-shadow: 0 0 3px #FF0000; */
     text-shadow: 0 0 3px #000000;
+  }
+
+  .trans-back {
+    background: url('../../assets/img/oscars_back_transparent.jpg');
+    background-size: cover;
+    background-position: center;
   }

@@ -49,7 +49,6 @@ export class ResultsComponent implements OnInit {
     this.ngxLoader.startLoader("loader-movie");
     this.awardService.getMovie(movie).subscribe( (data: any) => {
       this.movie = data;
-      this.ngxLoader.stop();
       this.modalService.open(content, { centered: true }).result.then((result) => {
       });
       this.ngxLoader.stopLoader("loader-movie");

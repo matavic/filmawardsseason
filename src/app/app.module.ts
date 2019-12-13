@@ -15,6 +15,10 @@ import { MainComponent } from './main/main.component';
 import { CategoryComponent } from './category/category.component';
 import { ResultsComponent } from './results/results.component';
 import { TrailerModalComponent } from './trailer-modal/trailer-modal.component';
+import { SelectionStatisticComponent } from './statistics/selection-statistic/selection-statistic.component';
+import { PresentationStatisticComponent } from './statistics/presentation-statistic/presentation-statistic.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoadedDirective } from './loaded.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { TrailerModalComponent } from './trailer-modal/trailer-modal.component';
     MainComponent,
     CategoryComponent,
     ResultsComponent,
-    TrailerModalComponent
+    TrailerModalComponent,
+    SelectionStatisticComponent,
+    PresentationStatisticComponent,
+    PageNotFoundComponent,
+    LoadedDirective
   ],
   imports: [
     BrowserModule,

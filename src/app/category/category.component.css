@@ -1,6 +1,7 @@
 .jumbotron {
     padding-top: 10px; 
     padding-bottom: 5px; 
+    margin-bottom: 0px; 
 }
 
 a:hover {
@@ -136,4 +137,11 @@ a:hover {
   .dark-modal .modal-content {
     background-color: #292b2c;
     color: white;
+  }
+
+  .trans-back {
+    background: url('../../assets/img/oscars_back_transparent.jpg');
+    background-repeat: repeat;
+    /* background-size: cover; */
+    background-position: center;
   }

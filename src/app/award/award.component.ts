@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AwardService } from './award.service';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { awards } from '../awards/awards';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { mapFlags } from '../map-flags';

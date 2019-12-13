@@ -7,6 +7,9 @@ import { AwardComponent } from './award/award.component';
 import { MainComponent } from './main/main.component';
 import { CategoryComponent } from './category/category.component';
 import { ResultsComponent } from './results/results.component';
+import { SelectionStatisticComponent } from './statistics/selection-statistic/selection-statistic.component';
+import { PresentationStatisticComponent } from './statistics/presentation-statistic/presentation-statistic.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -26,7 +29,16 @@ const routes: Routes = [
     path: "categories", component: CategoriesComponent
   },
   {
+    path: 'statistics', component: SelectionStatisticComponent
+  },
+  {
+    path: 'statistics/:type', component: PresentationStatisticComponent
+  },
+  {
     path: "", component: MainComponent
+  },
+  { 
+    path: '**', component: PageNotFoundComponent 
   }
 ];
 

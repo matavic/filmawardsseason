@@ -8,11 +8,11 @@
     /* color: black;
     text-shadow: 0 0 3px #FF0000; */
     text-shadow: 0 0 3px #000000;
-  }
-
-  .trans-back {
-    background: url('../../assets/img/oscars_back_transparent.jpg');
-    background-repeat: repeat;
-    /* background-size: cover; */
-    background-position: center;
+  }  
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 6vw;
+    }
   }

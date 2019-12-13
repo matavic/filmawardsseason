@@ -8,7 +8,8 @@
         <div class="card text-center border-secondary" *ngFor="let movie of movies$ | async">
             <img [src]="movie.winnerdata?.Poster || '../assets/img/no-image.png'" class="card-img-top" [alt]="movie.fwinner[0]">
             <div class="card-header h-10 bg-secondary">
-                <h5 class="card-title">{{movie.categorytit}}</h5>
+                <h5 class="card-title">{{movie.award}}</h5>
+                <span class="badge badge-primary">{{movie.categorytit}}</span>
             </div>
             <ul class="list-group list-group-flush" >
                 <li class="list-group-item" [class.bg-success]="movie.fwinner[0] === p" *ngFor="let p of movie.fnominees; let i = index">

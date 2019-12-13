@@ -18,6 +18,7 @@ export class MainComponent implements OnInit {
     'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576001022/filmawardsseason/ceremony1_hitlpn.jpg',
     'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576001023/filmawardsseason/ceremony2_pxmyb2.jpg',
     'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576001024/filmawardsseason/ceremony3_w9wtai.jpg',
+    'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576174106/filmawardsseason/red-carpet_dxnybz.png'
   ];
 
   constructor(config: NgbCarouselConfig) {

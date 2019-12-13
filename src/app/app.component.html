@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg text-white bg-primary navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">
+        <a class="navbar-brand text-white" routerLink="/">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               width="25px" height="25px" viewBox="0 0 492.316 492.316" style="enable-background:new 0 0 492.316 492.316;"
               xml:space="preserve">
@@ -31,10 +31,13 @@
           
           <ul class="navbar-nav pl-md-4 ml-auto">
             <li class="nav-item">
-              <a class="nav-link text-white" routerLink="/awards" (click)="isMenuCollapsed = true">Awards <span class="sr-only">(current)</span></a>
+              <a class="nav-link text-white" routerLink="/awards" (click)="isMenuCollapsed = true"  routerLinkActive="active">Awards <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" routerLink="/categories" (click)="isMenuCollapsed = true">Categories</a>
+              <a class="nav-link text-white" routerLink="/categories" (click)="isMenuCollapsed = true"  routerLinkActive="active">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" routerLink="/statistics" (click)="isMenuCollapsed = true"  routerLinkActive="active">Statistics</a>
             </li>
           </ul>
           <form (ngSubmit)="onSubmit()" class="form-inline my-2 my-lg-0 ml-md-3">

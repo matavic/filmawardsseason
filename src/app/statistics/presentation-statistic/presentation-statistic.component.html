@@ -3,3 +3,65 @@
         <h2 class="display-4 sombra text-center">{{title}}</h2>
     </div>
 </div>
+<div class="container mb-5" ngxUiLoaderBlurred>
+    <div class="graphic-container" *ngIf="graphicData && graphicData?.length > 0">
+        <ngx-charts-pie-chart
+            [scheme]="colorScheme"
+            [results]="graphicData"
+            [gradient]="gradient"
+            [legend]="showLegend"
+            [legendPosition]="legendPosition"
+            [labels]="showLabels"
+            [doughnut]="isDoughnut"
+            (select)="onSelect($event)"
+            >
+        </ngx-charts-pie-chart>
+    </div>
+    <div class="tabular-container my-5" *ngIf="tabularData && tabularData?.length > 0">
+        <table class="table table-striped" *ngIf="statisticType !== 'awards'">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Film</th>
+                <th scope="col">Awards</th>
+                <th scope="col">Nominations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of tabularData; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td>
+                    <a [routerLink]="['/results', d._id]" style="cursor:pointer; color: black;">{{d._id}}</a>
+                </td>
+                <td>{{d.awards}}</td>
+                <td>{{d.nominations}}</td>
+              </tr>
+            </tbody>
+        </table>
+        <table class="table table-striped" *ngIf="statisticType === 'nominations'">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Film</th>
+                <th scope="col">Nominations</th>
+                <th scope="col">Awards</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let d of tabularData; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td>
+                    <a [routerLink]="['/results', d._id]" style="cursor:pointer; color: black;">{{d._id}}</a>
+                </td>
+                <td>{{d.nominations}}</td>
+                <td>{{d.awards}}</td>
+              </tr>
+            </tbody>
+        </table>    
+    </div>
+
+    <div class="py-2" *ngIf="tabularData?.length == 0">
+        <h1 class="text-center">Sorry, Data Unavailable ...</h1>
+    </div> 
+</div>
+<ngx-ui-loader fgsColor="SlateGray" fgsType="rectangle-bounce-pulse-out-rapid"></ngx-ui-loader>

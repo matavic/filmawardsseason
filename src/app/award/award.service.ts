@@ -28,4 +28,21 @@ export class AwardService {
     const options = { params: new HttpParams().set('t', term) };
     return this.http.get(`${environment.apiUrl}search`, options);
    }
+
+   getStatistics(type){
+    let options = {};
+    switch (type) {
+      case 'awards':
+        options = { params: new HttpParams().set('t', 'p') };
+        break;
+      case 'nominations':
+        options = { params: new HttpParams().set('t', 'n') };
+        break;
+      default:
+        options = { params: new HttpParams().set('t', 'a').set('award', type) };
+        break;
+    }
+    
+    return this.http.get<any>(`${environment.apiUrl}count`, options);
+   }
 }

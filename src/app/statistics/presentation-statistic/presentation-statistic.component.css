@@ -1,7 +1,6 @@
 .jumbotron {
     padding-top: 10px; 
     padding-bottom: 5px; 
-    margin-bottom: 0px; 
 }
 
 .sombra {
@@ -9,10 +8,19 @@
     text-shadow: 0 0 3px #FF0000; */
     text-shadow: 0 0 3px #000000;
   }  
-  
-  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-  @media screen and (max-width: 600px) {
+
+  .graphic-container {
+    width: 100%; 
+    min-height: 500px;
+  }
+
+   /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+   @media screen and (max-width: 600px) {
     h2 {
       font-size: 6vw;
+    }
+
+    .graphic-container {
+      min-height: 250px;
     }
   }

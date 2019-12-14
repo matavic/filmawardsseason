@@ -40,8 +40,11 @@
               <a class="nav-link text-white" routerLink="/statistics" (click)="isMenuCollapsed = true">Statistics</a>
             </li>
           </ul>
+          <ng-template #rt let-r="result" let-t="term">
+            <ngb-highlight [result]="r" [term]="t" (click)="onSubmit(r)"></ngb-highlight>
+          </ng-template>
           <form (ngSubmit)="onSubmit()" class="form-inline my-2 my-lg-0 ml-md-3">
-              <input [(ngModel)]="searchText" class="form-control mr-sm-2 w-40" type="search" placeholder="Search movies or people" aria-label="Search" name="search">
+              <input #inp [(ngModel)]="searchText" class="form-control mr-sm-2 w-40" type="search" placeholder="Search movies or people" aria-label="Search" name="search" [ngbTypeahead]="search" [resultTemplate]="rt">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="../assets/img/search.png"></button>
             </form>
         </div>

@@ -15,3 +15,8 @@ position: fixed;
 ::-moz-placeholder {  /* Firefox 19+ */
      font-size: 13px!important;
 }
+
+.navbar-nav > li > a.router-link-active {
+  color: #555;
+  background-color: #e7e7e7;
+}

@@ -20,6 +20,7 @@
                     <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;" placement="top" ngbTooltip="View Movie Info">{{p}}</a><br>
                     <span *ngIf="movie.pnominees[i]" class="badge badge-warning text_badge">{{movie.pnominees[i]}}</span><br *ngIf="movie.winnerdata?.Youtube && movie.fwinner[0] === p && movie.pnominees[i]">
                     <a *ngIf="movie.winnerdata?.Youtube && movie.fwinner[0] === p" (click)="openTrailerModal(movie.winnerdata?.Youtube)" style="cursor: pointer;"><img src="../assets/img/youtube.jpg" width="24" alt="Trailer" title="View Trailer"></a>
+                    <a *ngIf="movie.winnerdata?.Netflix && movie.fwinner[0] === p" [href]="movie.winnerdata?.Netflix" target="_blank"style="cursor: pointer;"><img src="../assets/img/netflix.png" width="32" alt="Netflix" title="View on Netflix"></a>
                 </li>
             </ul>    
         </div>  

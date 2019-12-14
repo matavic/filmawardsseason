@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { NgbCollapseModule, NgbCarouselModule, NgbModalModule, NgbPopoverModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCollapseModule, NgbCarouselModule, NgbModalModule, NgbPopoverModule, NgbTooltipModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NgxUiLoaderModule } from  'ngx-ui-loader';
 import { AwardsComponent } from './awards/awards.component';
@@ -47,6 +47,7 @@ import { LoadedDirective } from './loaded.directive';
     NgbPopoverModule,
     NgbModalModule,
     NgbTooltipModule,
+    NgbTypeaheadModule,
     HttpClientModule,
     NgxUiLoaderModule,
     NgxChartsModule,

@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { environment } from '../environments/environment';
+
+declare var gtag;
 
 @Component({
   selector: 'app-root',
@@ -9,7 +13,21 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor(
     private router: Router
-  ){}
+  ){
+    const scriptTag = document.createElement('script');
+    scriptTag.async = true;
+    scriptTag.src = 'https://www.googletagmanager.com/gtag/js?id=' + environment.code;
+    document.head.prepend(scriptTag);
+
+    const navEndEvents = router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+    );
+    navEndEvents.subscribe((event: NavigationEnd) => {
+      gtag('config', 'UA-154618974-1', {
+        'page_path': event.urlAfterRedirects
+      });
+    });
+  }
 
   title = 'filmawardsseason';
   public isMenuCollapsed = true;

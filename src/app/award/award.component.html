@@ -14,12 +14,16 @@
             </div>
             <ul class="list-group list-group-flush" >
                 <li class="list-group-item" [class.bg-success]="movie.fwinner[0] === p" *ngFor="let p of movie.fnominees; let i = index">
-                    <span *ngIf="movie.categorycod === 'foreign'"><span class="flag-icon" [ngClass]="movie.categorycod === 'foreign' ? flags.get(movie.pnominees[i]) : ''"></span>&nbsp;&nbsp;</span>
-                    <br *ngIf="movie.categorycod === 'foreign'">
-                    <a (click)="open(content, $event.target.innerText)" style="cursor:pointer;" placement="top" ngbTooltip="View Movie Info">{{p}}</a><br>
-                    <span *ngIf="movie.pnominees[i]" class="badge badge-warning text_badge">{{movie.pnominees[i]}}</span><br *ngIf="movie.winnerdata?.Youtube && movie.fwinner[0] === p && movie.pnominees[i]">
-                    <a *ngIf="movie.winnerdata?.Youtube && movie.fwinner[0] === p" (click)="openTrailerModal(movie.winnerdata?.Youtube)" style="cursor: pointer;"><img src="../assets/img/youtube.jpg" width="24" alt="Trailer" title="View Trailer"></a>
-                    <a *ngIf="movie.winnerdata?.Netflix && movie.fwinner[0] === p" [href]="movie.winnerdata?.Netflix" target="_blank"style="cursor: pointer;"><img src="../assets/img/netflix.png" width="32" alt="Netflix" title="View on Netflix"></a>
+                    <div>
+                        <span *ngIf="movie.categorycod === 'foreign'"><span class="flag-icon" [ngClass]="movie.categorycod === 'foreign' ? flags.get(movie.pnominees[i]) : ''"></span>&nbsp;&nbsp;</span>
+                        <br *ngIf="movie.categorycod === 'foreign'">
+                        <a (click)="open(content, p)" style="cursor:pointer;" placement="top" ngbTooltip="View Movie Info">{{p}}</a>
+                    </div>
+                    <span *ngIf="movie.pnominees[i]" class="badge badge-warning text_badge">{{movie.pnominees[i]}}</span>
+                    <div>
+                        <a *ngIf="movie.winnerdata?.Youtube && movie.fwinner[0] === p" (click)="openTrailerModal(movie.winnerdata?.Youtube)" style="cursor: pointer;"><img src="../assets/img/youtube.jpg" width="24" alt="Trailer" title="View Trailer"></a>
+                        <a *ngIf="movie.winnerdata?.Netflix && movie.fwinner[0] === p" [href]="movie.winnerdata?.Netflix" target="_blank"style="cursor: pointer;"><img src="../assets/img/netflix.png" width="32" alt="Netflix" title="View on Netflix"></a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -146,7 +150,9 @@
                 </td>
                 <td >
                     <ng-container *ngFor="let rating of movie.Ratings; let i = index">
-                        <img [src]="critics[i]" style="width: 25px;">&nbsp;<span>{{rating.Source}} </span>&nbsp;<span class="badge badge-danger"> {{rating.Value}}</span><br>
+                        <div>
+                            <img [src]="critics[i]" style="width: 25px;">&nbsp;<span>{{rating.Source}} </span>&nbsp;<span class="badge badge-danger"> {{rating.Value}}</span>
+                        </div>
                     </ng-container>
                 </td>
             </tr>

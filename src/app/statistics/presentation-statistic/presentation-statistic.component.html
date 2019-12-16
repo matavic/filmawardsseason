@@ -23,8 +23,8 @@
               <tr>
                 <th class="notranslate" scope="col">#</th>
                 <th scope="col">Film</th>
-                <th scope="col">Awards</th>
-                <th scope="col">Nominations</th>
+                <th scope="col" class="text-center">Awards</th>
+                <th scope="col" class="text-center">Nominations</th>
               </tr>
             </thead>
             <tbody>
@@ -33,8 +33,8 @@
                 <td>
                     <a [routerLink]="['/results', d._id]" style="cursor:pointer; color: black;">{{d._id}}</a>
                 </td>
-                <td class="notranslate">{{d.awards}}</td>
-                <td class="notranslate">{{d.nominations}}</td>
+                <td class="notranslate text-center">{{d.awards}}</td>
+                <td class="notranslate text-center">{{d.nominations}}</td>
               </tr>
             </tbody>
         </table>
@@ -43,8 +43,8 @@
               <tr>
                 <th class="notranslate" scope="col">#</th>
                 <th scope="col">Film</th>
-                <th scope="col">Nominations</th>
-                <th scope="col">Awards</th>
+                <th scope="col" class="text-center">Nominations</th>
+                <th scope="col" class="text-center">Awards</th>
               </tr>
             </thead>
             <tbody>
@@ -53,8 +53,8 @@
                 <td>
                     <a [routerLink]="['/results', d._id]" style="cursor:pointer; color: black;">{{d._id}}</a>
                 </td>
-                <td class="notranslate">{{d.nominations}}</td>
-                <td class="notranslate">{{d.awards}}</td>
+                <td class="notranslate text-center">{{d.nominations}}</td>
+                <td class="notranslate text-center">{{d.awards}}</td>
               </tr>
             </tbody>
         </table>    

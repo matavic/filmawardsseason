@@ -21,6 +21,12 @@ export class ResultsComponent implements OnInit {
   public noImage = '';
   public movie: any = {};
   public flags = mapFlags;
+  public awardsForResult: number = 0;
+  public ab: boolean = false;
+  public nominationsForResult: number = 0;
+  public nb: boolean = false;
+  public thereIsData: number;
+
   critics = [
     '../assets/img/critics1.jpg',
     '../assets/img/critics2.jpg',
@@ -45,8 +51,40 @@ export class ResultsComponent implements OnInit {
     this.movies$ = this.awardService.search(this.term)
     .pipe(
       tap( data => {
-        for(let i=0; i < data.length; i++)
+        this.thereIsData = data.length;
+        for(let i=0; i < data.length; i++){
           this.ngxLoader.startLoader(String(i));
+        }
+        
+        for(let i=0; i < data.length; i++){
+          for(let j=0; j < data[i].fwinner.length; j++){
+            if (data[i].fwinner[j].trim().toLowerCase() === this.term.trim().toLowerCase()){
+              this.ab = true;
+              this.awardsForResult++;
+            }
+          }
+
+          for(let k=0; k < data[i].fnominees.length; k++){
+            if (data[i].fnominees[k].trim().toLowerCase() === this.term.trim().toLowerCase()){
+              this.nb = true;
+              this.nominationsForResult++;
+            }
+          }
+
+          for(let m=0; m < data[i].pwinner.length; m++){
+            if (data[i].pwinner[m].trim().toLowerCase() === this.term.trim().toLowerCase()){
+              this.ab = true;
+              this.awardsForResult++;
+            }
+          }
+
+          for(let n=0; n < data[i].pnominees.length; n++){
+            if (data[i].pnominees[n].trim().toLowerCase() === this.term.trim().toLowerCase()){
+              this.nb = true;
+              this.nominationsForResult++;
+            }
+          }
+        }
       })
     );
     this.ngxLoader.stop();

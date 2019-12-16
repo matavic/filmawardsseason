@@ -25,6 +25,8 @@ export class AwardComponent implements OnInit {
   public noImage = '';
   public movie: any = {};
   public flags = mapFlags;
+  public thereIsData: number;
+
   critics = [
     '../assets/img/critics1.jpg',
     '../assets/img/critics2.jpg',
@@ -47,6 +49,7 @@ export class AwardComponent implements OnInit {
     this.movies$ = this.awardService.getMovies(this.award)
       .pipe(
         tap( data => {
+          this.thereIsData = data.length;
           for(let i=0; i < data.length; i++)
             this.ngxLoader.startLoader(String(i));
         })

@@ -156,3 +156,18 @@ a:hover {
     /* background-size: cover; */
     background-position: center;
   }
+
+  .lazy-container {
+    display: block;
+    position: relative;
+    height: 0;
+    padding-bottom: 148%;
+   }
+   
+   .lazy-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   }

@@ -7,8 +7,11 @@
 </div>
 <div class="container-fluid mb-5 trans-back pt-5" ngxUiLoaderBlurred>
     <div class="card-columns">
-        <div class="card text-center border-secondary" *ngFor="let movie of movies$ | async">
-            <img [src]="movie.winnerdata?.Poster || '../assets/img/no-image.png'" class="card-img-top" [alt]="movie.fwinner[0]">
+        <div class="card text-center border-secondary" *ngFor="let movie of movies$ | async; let ind = index">
+            <div class="lazy-container" ngxUiLoaderBlurred>
+                <img [src]="movie.winnerdata?.Poster || '../assets/img/no-image.png'" class="card-img-top" [alt]="movie.fwinner[0]" (loaded)="imgLoaded(ind)">
+                <ngx-ui-loader fgsColor="Goldenrod" [loaderId]="ind" fgsType="fading-circle" [hasProgressBar]="false"></ngx-ui-loader>
+            </div>
             <div class="card-header h-10 bg-secondary">
                 <h5 class="card-title">{{movie.categorytit}}</h5>
             </div>
@@ -48,7 +51,7 @@
         </div>
     </div> -->
 </div>
-<ngx-ui-loader fgsColor="SlateGray" fgsType="rectangle-bounce-pulse-out-rapid"></ngx-ui-loader>
+<ngx-ui-loader fgsColor="Goldenrod" fgsType="rectangle-bounce-pulse-out-rapid"></ngx-ui-loader>
 <ng-template #content let-modal>
     <div class="modal-header bg-secondary">
         <h4 class="modal-title" id="modal-basic-title">Movie Info</h4>
@@ -166,7 +169,7 @@
             </tr>
         </table>
     </div>
-    <ngx-ui-loader fgsColor="SlateGray" loaderId="loader-movie" fgsType="rectangle-bounce-pulse-out-rapid"></ngx-ui-loader>
+    <ngx-ui-loader fgsColor="Goldenrod" loaderId="loader-movie" fgsType="rectangle-bounce-pulse-out-rapid"></ngx-ui-loader>
     <div class="modal-footer">
         <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
     </div>

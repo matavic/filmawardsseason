@@ -8,6 +8,7 @@ import { mapCategories } from './map-categories';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { mapFlags } from '../map-flags';
 import { TrailerModalComponent } from '../trailer-modal/trailer-modal.component';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-category',
@@ -39,7 +40,13 @@ export class CategoryComponent implements OnInit {
     this.ngxLoader.start();
     this.category = this.route.snapshot.paramMap.get('categoryname');
     this.categoryDescription = categories.find((a) => a.title === this.category).description;
-    this.movies$ = this.awardService.getMoviesByCategory(mapCategories.get(this.category));
+    this.movies$ = this.awardService.getMoviesByCategory(mapCategories.get(this.category))
+    .pipe(
+      tap( data => {
+        for(let i=0; i < data.length; i++)
+          this.ngxLoader.startLoader(String(i));
+      })
+    );
     this.ngxLoader.stop();
   }
 
@@ -59,6 +66,10 @@ export class CategoryComponent implements OnInit {
     let url = `https://www.youtube.com/embed/${videoId}?controls=0&autoplay=1`
     modalRef.componentInstance.videoId = url;
     this.ngxLoader.stopLoader("loader-movie");
+  }
+
+  imgLoaded(i){
+    this.ngxLoader.stopLoader(i);
   }
 
 }

@@ -6,6 +6,7 @@ import { AwardService } from '../award/award.service';
 import { NgbModal}  from '@ng-bootstrap/ng-bootstrap';
 import { mapFlags } from '../map-flags';
 import { TrailerModalComponent } from '../trailer-modal/trailer-modal.component';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-results',
@@ -41,7 +42,13 @@ export class ResultsComponent implements OnInit {
   ngOnInit() {
     this.ngxLoader.start();
     this.term = this.route.snapshot.paramMap.get('search');
-    this.movies$ = this.awardService.search(this.term);
+    this.movies$ = this.awardService.search(this.term)
+    .pipe(
+      tap( data => {
+        for(let i=0; i < data.length; i++)
+          this.ngxLoader.startLoader(String(i));
+      })
+    );
     this.ngxLoader.stop();
   }
 
@@ -61,5 +68,9 @@ export class ResultsComponent implements OnInit {
     let url = `https://www.youtube.com/embed/${videoId}?controls=0&autoplay=1`
     modalRef.componentInstance.videoId = url;
     this.ngxLoader.stopLoader("loader-movie");
+  }
+
+  imgLoaded(i){
+    this.ngxLoader.stopLoader(i);
   }
 }

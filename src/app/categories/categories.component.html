@@ -20,13 +20,13 @@
                 <div class="text-center mt-2">
                     <img [src]="category.image" class="card-img-top" [alt]="category.title" style="width:100px;">
                 </div>    
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">{{ category.title}}</h5>
-                        <p class="card-text">{{ category.description }}</p>
-                    </div>
-                    <div class="card-footer">
-                        <a [routerLink]="['/category', category.title]" class="btn btn-primary">View</a>
-                    </div>
+                <div class="card-body">
+                    <h5 class="card-title text-primary">{{ category.title}}</h5>
+                    <p class="card-text">{{ category.description }}</p>
+                </div>
+                <div class="card-footer">
+                    <a [routerLink]="['/category', category.title]" class="btn btn-primary">View</a>
+                </div>
             </div>
         </div>
     </div>

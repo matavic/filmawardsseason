@@ -7,6 +7,7 @@ import { awards } from '../awards/awards';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { mapFlags } from '../map-flags';
 import { TrailerModalComponent } from '../trailer-modal/trailer-modal.component';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-award',
@@ -43,7 +44,13 @@ export class AwardComponent implements OnInit {
     this.awardDescription = awards.find((a) => a.title === this.award).description;
     this.awardImage = awards.find((a) => a.title === this.award).image;
     this.awardDate = awards.find((a) => a.title === this.award).date;
-    this.movies$ = this.awardService.getMovies(this.award);
+    this.movies$ = this.awardService.getMovies(this.award)
+      .pipe(
+        tap( data => {
+          for(let i=0; i < data.length; i++)
+            this.ngxLoader.startLoader(String(i));
+        })
+      );
     this.ngxLoader.stop();
   }
 
@@ -63,5 +70,9 @@ export class AwardComponent implements OnInit {
     let url = `https://www.youtube.com/embed/${videoId}?controls=0&autoplay=1`
     modalRef.componentInstance.videoId = url;
     this.ngxLoader.stopLoader("loader-movie");
+  }
+
+  imgLoaded(i){
+    this.ngxLoader.stopLoader(i);
   }
 }

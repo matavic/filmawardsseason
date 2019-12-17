@@ -10,17 +10,18 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
 })
 export class MainComponent implements OnInit {
 
-  // images = [
-  //   '../assets/img/ceremony1.jpg',
-  //   '../assets/img/ceremony2.jpg',
-  //   '../assets/img/ceremony3.jpg',
-  // ];
   images = [
-    'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576001022/filmawardsseason/ceremony1_hitlpn.jpg',
-    'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576001023/filmawardsseason/ceremony2_pxmyb2.jpg',
-    'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576001024/filmawardsseason/ceremony3_w9wtai.jpg',
-    'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576174106/filmawardsseason/red-carpet_dxnybz.png'
+    '../assets/img/ceremony1.jpg',
+    '../assets/img/ceremony2.jpg',
+    '../assets/img/ceremony3.jpg',
+    '../assets/img/red-carpet.png',
   ];
+  // images = [
+  //   'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576001022/filmawardsseason/ceremony1_hitlpn.jpg',
+  //   'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576001023/filmawardsseason/ceremony2_pxmyb2.jpg',
+  //   'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576001024/filmawardsseason/ceremony3_w9wtai.jpg',
+  //   'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576174106/filmawardsseason/red-carpet_dxnybz.png'
+  // ];
 
   public hidImage1: boolean = true;
   public hidImage2: boolean = true;

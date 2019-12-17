@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { environment } from '../environments/environment';
 import { AwardService } from './award/award.service';
 import {Observable, of} from 'rxjs';
-import { catchError, debounceTime, distinctUntilChanged, map, tap, switchMap } from 'rxjs/operators';
+import { catchError, debounceTime, distinctUntilChanged, tap, switchMap } from 'rxjs/operators';
 
 declare var gtag;
 
@@ -26,11 +25,6 @@ export class AppComponent {
     private router: Router,
     private awardService: AwardService
   ){
-    const scriptTag = document.createElement('script');
-    scriptTag.async = true;
-    scriptTag.src = 'https://www.googletagmanager.com/gtag/js?id=' + environment.code;
-    document.head.prepend(scriptTag);
-
     const navEndEvents = router.events.pipe(
       filter(event => event instanceof NavigationEnd),
     );

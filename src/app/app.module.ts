@@ -21,6 +21,8 @@ import { SelectionStatisticComponent } from './statistics/selection-statistic/se
 import { PresentationStatisticComponent } from './statistics/presentation-statistic/presentation-statistic.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoadedDirective } from './loaded.directive';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,7 @@ import { LoadedDirective } from './loaded.directive';
     HttpClientModule,
     NgxUiLoaderModule,
     NgxChartsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent],

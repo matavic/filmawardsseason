@@ -15,6 +15,9 @@ export class MainComponent implements OnInit {
     '../assets/img/ceremony2.jpg',
     '../assets/img/ceremony3.jpg',
     '../assets/img/red-carpet.png',
+    '../assets/img/ceremony1-750.jpg',
+    '../assets/img/ceremony2-750.jpg',
+    '../assets/img/ceremony3-750.jpg'
   ];
   // images = [
   //   'https://res.cloudinary.com/dw5ahwj7g/image/upload/v1576001022/filmawardsseason/ceremony1_hitlpn.jpg',

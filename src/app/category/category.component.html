@@ -61,7 +61,7 @@
     </div>
     <div class="modal-body">
         <h2 class="text-center">{{movie.Title}}</h2>
-        <h3 *ngIf="!movie.Title" class="text-center">Movie Info No Available</h3>
+        <h3 *ngIf="!movie.Title" class="text-center">Movie Info Not Available</h3>
         <div class="text-center">
             <img [src]="movie.Poster || '../assets/img/nominee.png'" style="width: 65%;" class="img-fluid" [alt]="movie.Title">
         </div>

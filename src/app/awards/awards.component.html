@@ -14,14 +14,14 @@
 </div>
 
 <div class="container-fluid mb-5 pt-5 trans-back">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5" style="padding-bottom: 2rem;">
         <div class="col mb-4" *ngFor="let award of awards; let i = index">
             <div class="card text-center h-100" >
                 <div class="lazy-container" ngxUiLoaderBlurred>
                     <img [src]="award.image" class="card-img-top" [alt]="award.title" (loaded)="imgLoaded(i)">
                     <ngx-ui-loader fgsColor="Goldenrod" [loaderId]="i" fgsType="fading-circle" [hasProgressBar]="false"></ngx-ui-loader>
                 </div>
-                <div class="card-body">
+                <div class="card-body ion-text-justify">
                     <h5 class="card-title text-primary">{{ award.title}}</h5>
                     <p class="card-text">{{ award.description }}</p>
                 </div>

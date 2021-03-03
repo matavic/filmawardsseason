@@ -93,7 +93,7 @@ export const awards = [
         title: 'Writers Guild of America Awards',
         image: '../assets/img/writers-guild.jpg',
         description: 'The Writers Guild of America Awards for outstanding achievements in film writing, including both fiction and non-fiction categories.',
-        date: 'Feabruary 1, 2020'
+        date: 'February 1, 2020'
     },
     {
         title: 'BAFTAs',

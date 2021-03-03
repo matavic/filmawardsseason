@@ -1,1 +1,6 @@
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Redirect default Netlify subdomain to primary domain
+https://sharp-chandrasekhar-e01492.netlify.com/* https://filmawardsseason.club/:splat 301!
+
 /*  /index.html 200

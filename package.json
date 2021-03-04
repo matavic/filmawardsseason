@@ -25,6 +25,7 @@
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "@swimlane/ngx-charts": "12.1.0",
     "bootstrap": "^4.4.1",
+    "bootswatch": "^4.6.0",
     "flag-icon-css": "^3.4.5",
     "ngx-ui-loader": "^8.0.0",
     "rxjs": "~6.4.0",

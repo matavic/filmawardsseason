@@ -20,3 +20,7 @@ position: fixed;
   color: #555;
   background-color: #e7e7e7;
 }
+
+.bg-primary {
+  background-color: #003a50 !important;
+} 
